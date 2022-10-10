@@ -1,0 +1,5 @@
+
+// backend
+npm i bcrypt@5.0.1
+npm i validator@13.7.0
+npm i jsonwebtoken@8.5.1

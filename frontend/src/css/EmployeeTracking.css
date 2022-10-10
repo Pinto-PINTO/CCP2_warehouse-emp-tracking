@@ -1,0 +1,756 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+/* ------------------------------------------------------------------- */
+/* ------------------------ NAV BAR CSS START ------------------------ */
+/* ------------------------------------------------------------------- */
+
+.nav-bar-edit {
+  font-family: montserrat !important;
+  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  box-shadow: -2px 7px 18px 0px rgba(255, 255, 255, 0.15);
+  background: #0f0e0e;
+  color: white;
+  padding: 15px !important;
+}
+
+.nav-user-name-emp {
+  padding-right: 15px;
+}
+
+.nav-link-btn {
+  margin-right: 10px;
+  padding-top: 8px !important;
+  background: #455e72 !important;
+  border: #455e72 !important;
+  transition: all 0.5s ease-in-out !important;
+}
+
+.nav-link-btn:hover {
+  background: #406882 !important;
+  border: #406882 !important;
+  transition: transform 250ms linear !important;
+}
+
+.nav-logout {
+  padding-left: 15px !important;
+  padding-top: 5px;
+}
+
+.insert-form {
+  background-color: white !;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+  /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24) !important; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
+  /* max-width: 330px;
+      min-width: 330px;  */
+  margin: 15px !important;
+  font-family: montserrat !important;
+  padding-top: 0px !important;
+}
+
+/* ----------------------------------------------------------------- */
+/* ------------------------ NAV BAR CSS END ------------------------ */
+/* ----------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------- */
+/* ------------------------ DIAGRAM CSS START ------------------------ */
+/* ------------------------------------------------------------------- */
+
+.container1 {
+  width: 100%;
+  height: 100%;
+  background-color: #fdfdfd;
+  /* background-color: #d4d4d4; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.imageDiv {
+  width: 927px;
+  height: 529px;
+  background-image: url(https://i.postimg.cc/bNcShRw2/Asset-1.png);
+  /* background-image: url(https://i.postimg.cc/bw6JG7zn/building.png); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border: solid 3px black;
+  border-radius: 100%;
+  position: absolute;
+  cursor: pointer;
+  transition: all 200ms 0s ease-in-out;
+}
+
+.p1 {
+  margin-top: 250px;
+  margin-left: 189px;
+}
+
+.p2 {
+  margin-top: 218px;
+  margin-left: 251px;
+}
+
+.p3 {
+  margin-top: 217px;
+  margin-left: 409px;
+}
+
+.p4 {
+  margin-top: 297px;
+  margin-left: 569px;
+}
+
+.p5 {
+  margin-top: 274px;
+  margin-left: 658px;
+}
+
+.p1:hover {
+  transform: scale(1.1);
+  background-color: rgb(255, 145, 0);
+}
+
+.p2:hover {
+  transform: scale(1.1);
+  background-color: rgb(255, 145, 0);
+}
+
+.p3:hover {
+  transform: scale(1.1);
+  background-color: rgb(255, 145, 0);
+}
+
+.p4:hover {
+  transform: scale(1.1);
+  background-color: rgb(255, 145, 0);
+}
+
+.p5:hover {
+  transform: scale(1.1);
+  background-color: rgb(255, 145, 0);
+}
+
+/* ========== Boxes ========== */
+
+.box {
+  /* width: 150px;
+    height: 100px;
+    background-color: rgb(204, 204, 204);
+    position: absolute;
+    display: none;
+    transition: all 500ms 0s ease-in-out; */
+  display: none;
+  width: 200px;
+  height: 150px;
+  cursor: help;
+  text-shadow: 0 1px 0 #fff;
+  position: absolute;
+  padding: 15px;
+  color: #222;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.7);
+  background: #fff1d3;
+
+  /* background: linear-gradient(top, #fff1d3, #ffdb90); */
+
+  font-family: "Titillium Web", sans-serif;
+}
+
+.b1 {
+  margin-top: 270px;
+  margin-left: 200px;
+}
+
+.b2 {
+  margin-top: 238px;
+  margin-left: 261px;
+}
+
+.b3 {
+  margin-top: 237px;
+  margin-left: 419px;
+}
+
+.b4 {
+  margin-top: 317px;
+  margin-left: 580px;
+}
+
+.b5 {
+  margin-top: 294px;
+  margin-left: 668px;
+}
+
+/* ========== Boxes Show ========== */
+
+.p1:hover ~ .b1 {
+  display: block;
+}
+
+.p2:hover ~ .b2 {
+  display: block;
+}
+
+.p3:hover ~ .b3 {
+  display: block;
+}
+
+.p4:hover ~ .b4 {
+  display: block;
+}
+
+.p5:hover ~ .b5 {
+  display: block;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------ DIAGRAM CSS END -------------------------- */
+/* ------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------- */
+/* ------------------------ TABLE CSS START ------------------------ */
+/* ----------------------------------------------------------------- */
+
+.content {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color: #0f0e0e;
+  /* background-color: #1f2739; */
+  background-color: #fdfdfd;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.table-name {
+  margin-top: 70px;
+  color: #0f0e0e;
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  font-weight: 400;
+  /* color: #4dc3fa; */
+}
+
+.table-info {
+  padding-bottom: 60px !important;
+  padding-top: 10px;
+  color: #0f0e0e;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  padding-bottom: 2em;
+  font-weight: 500;
+  /* color: #fb667a; */
+}
+
+.table-container th h1 {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  color: #d5d6d1;
+}
+
+.table-container th {
+  padding: 0px !important;
+  padding-top: 40px !important;
+  padding-bottom: 30px !important;
+}
+
+.table-container td {
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0e1119;
+  -moz-box-shadow: 0 2px 2px -2px #0e1119;
+  box-shadow: 0 2px 2px -2px #0e1119;
+  padding: 0px !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+.table-container {
+  text-align: right;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
+.table-container td,
+.table-container th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.table-container tr:nth-child(odd) {
+  background-color: #d5d6d1;
+}
+
+/* Background-color of the even rows */
+.table-container tr:nth-child(even) {
+  background-color: #b4b5b1;
+}
+
+.table-container th {
+  background-color: #0f0e0e;
+}
+
+.table-container td:first-child {
+  color: #0f0e0e;
+}
+
+/* .table-container tr:hover {
+    background-color: #5a758a;
+    -webkit-box-shadow: 0 6px 6px -6px #0e1119;
+    -moz-box-shadow: 0 6px 6px -6px #0e1119;
+    box-shadow: 0 6px 6px -6px #0e1119;
+  } */
+
+.delete-edit {
+  margin-right: 10px;
+  color: white;
+  background-color: #621017;
+  border: #621017;
+}
+
+.delete-edit:hover {
+  background-color: rgb(181, 5, 23);
+  border: rgb(181, 5, 23);
+}
+
+.update-edit {
+  color: white;
+  background-color: #124c20;
+  border: #124c20;
+}
+
+.update-edit:hover {
+  color: white;
+  background-color: #1a6f2e;
+  border: #1a6f2e;
+}
+
+/* CSS */
+.generate-btn {
+  border: 1px solid #0f0e0e;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #0f0e0e;
+  background: #ffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.generate-btn:hover,
+.generate-btn:active {
+  background-color: #0f0e0e;
+  background-position: 0 0;
+  color: #ffffff;
+}
+
+.generate-btn:active {
+  opacity: 0.5;
+}
+
+.generate-btn-section {
+  margin-bottom: 30px;
+}
+
+/* @media (max-width: 800px) {
+    .table-container td:nth-child(4),
+    .table-container th:nth-child(4) {
+      display: none;
+    }
+  } */
+
+/* --------------------------------------------------------------- */
+/* ------------------------ TABLE CSS END ------------------------ */
+/* --------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------ PDF GENERATOR CSS START ------------------------ */
+/* ------------------------------------------------------------------------- */
+
+@page {
+  bleed: 1cm;
+  size: A4 portrait;
+  size: auto; /* auto is the initial value */
+  margin-bottom: 50pt;
+  margin-top: 0cm;
+  font-size: 12pt;
+}
+
+@media print {
+  .page {
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr.last-row {
+    background-color: #555 !important;
+  }
+
+  tr.last-row > th,
+  tr.last-row > td {
+    background-color: unset !important;
+  }
+
+  div.page-break {
+    page-break-before: auto;
+  }
+}
+
+.gray {
+  color: #0f0e0e;
+}
+
+.gray-ish {
+  color: rgb(76, 76, 76);
+}
+
+.almost-gray {
+  color: #999;
+}
+
+div.invoice-header {
+  background-color: #0f0e0e !important;
+  color: white;
+  border-bottom: 5px solid #d5d6d1 !important;
+}
+
+div.invoice-header > div > p {
+  font-size: 1.2rem;
+  font-weight: 350;
+}
+
+div.invoice-header > div > h1 {
+  font-size: 4rem;
+}
+
+div.invoice-table {
+  border-top: 3px solid #0f0e0e !important;
+}
+
+div.invoice-table > table.table > thead,
+div.invoice-table > table.table > thead.thead > tr,
+div.invoice-table > table.table > thead.thead > tr > th {
+  border-top: none;
+}
+
+div.total-field {
+  position: relative;
+}
+
+h5.due-date {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}
+
+div.sub-table {
+  border-left: 3px solid rgb(255, 77, 77);
+  padding-left: 0;
+}
+
+div.sub-table > table {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+tr.last-row {
+  margin-top: 25px;
+  background-color: #555;
+  color: white;
+  border-top: 3px solid rgb(255, 77, 77);
+}
+
+p.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding-top: 15px;
+  border-top: 3px solid red;
+}
+
+.additional-information {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.additional-information h4 {
+  font-size: 21px !important;
+}
+
+.additional-information p {
+  font-size: 15px !important;
+}
+
+.page-footer p {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------ PDF GENERATOR CSS END ------------------------ */
+/* ----------------------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+/* ---------------- PROFILE CARD CSS START ---------------- */
+/* -------------------------------------------------------- */
+
+.profile-card {
+  width: 400px;
+  background-color: #efefef;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+.profile-image img {
+  transition: all 0.5s;
+}
+
+.profile-card:hover .profile-image img {
+  transform: scale(1.5);
+}
+
+.profile-img-btn {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+}
+
+.p-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.p-idd {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.p-idd1 {
+  font-size: 12px;
+}
+
+.p-number {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.p-follow {
+  font-size: 12px;
+  font-weight: 500;
+  color: #444444;
+}
+
+.edit-btn1 {
+  height: 40px;
+  width: 150px;
+  border: none;
+  background-color: #000;
+  color: #aeaeae;
+  font-size: 15px;
+}
+
+.edit-btn1:hover {
+  color: white;
+  background-color: rgb(45, 44, 44);
+}
+
+.p-text span {
+  font-size: 13px;
+  color: #545454;
+  font-weight: 500;
+}
+
+.p-icons i {
+  font-size: 19px;
+}
+
+hr .new1 {
+  border: 1px solid;
+}
+
+.p-join {
+  font-size: 14px;
+  color: #a0a0a0;
+  font-weight: bold;
+}
+
+.p-date {
+  background-color: #ccc;
+}
+
+.profile-section-text {
+  margin-top: 15px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  margin-bottom: 10px;
+}
+
+.custom-section-margin {
+  margin-top: 3px;
+}
+
+.p-status-section {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.available-mark {
+  color: white;
+  background-color: green;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.unavailable-mark {
+  color: white;
+  background-color: rgb(208, 36, 36);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.profile-btn-section {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------ */
+/* ---------------- PROFILE CARD CSS END ---------------- */
+/* ------------------------------------------------------ */
+
+
+/* ------------------------------------------------ */
+/* ---------------- FORM CSS START ---------------- */
+/* ------------------------------------------------ */
+
+.entire-form-section {
+  height: 100% !important;
+}
+
+.filter-section {
+  margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.filter-form-section {
+  background: white;
+  border-radius: 10px;
+  width: 80%;
+  padding-bottom: 30px !important;
+  /* border: 3px solid #3a3c46; */
+  margin-bottom: 100px;
+}
+
+.filter-container {
+  font-family: montserrat !important;
+}
+
+.filter-btn {
+  background: #0f0e0e !important;
+  border: #0f0e0e !important;
+  transition: all 0.5s ease-in-out !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.filter-btn:hover {
+  background: #3a414f !important;
+  border: #3a414f !important;
+  transition: transform 250ms linear !important;
+}
+
+.form-field {
+  color: #0f0e0e;
+  font-weight: 500;
+}
+
+.form-center {
+  display:flex;
+  justify-content: center;
+}
+
+.insert-form {
+  background-color: #a7a1ae;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
+  margin: 15px !important;
+  font-family: montserrat !important;
+  padding-top: 0px !important;
+}
+
+.btn-padding {
+  margin-top: 30px;
+  width: 130px;
+}
+
+.distribution-btn {
+  background: #4b4b4b !important;
+  border: #0f0e0e !important;
+  transition: all 0.5s ease-in-out !important;
+}
+
+.distribution-btn:hover {
+  background: #3a414f !important;
+  border: #3a414f !important;
+  transition: transform 250ms linear !important;
+}
+
+
+
+
+/* ---------------------------------------------- */
+/* ---------------- FORM CSS END ---------------- */
+/* ---------------------------------------------- */

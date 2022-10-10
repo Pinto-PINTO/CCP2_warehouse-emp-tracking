@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+/*------------------------------------------------------------------*/
+/*-------------------- ENTIRE SECTION CSS START --------------------*/
+/*------------------------------------------------------------------*/
+
+.card-row {
+  margin-bottom: 50px !important;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.card-section-full {
+  margin-bottom: 30px;
+}
+
+.card-full-section {
+  padding-bottom: 50px;
+}
+
+/* IF YOU WANT TO RESIZE THE IMAGE ADJUST THE HEIGHT HERE */
+.img-size-edit {
+  height: 300px !important;
+}
+
+/* .card-topic {
+    padding-bottom: 15px;
+    font-size: 20px;
+} */
+
+.card-topic {
+  background: rgba(157, 187, 63, 0.85);
+  padding: 3.5% 0 2.5% 0;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*------------------------------------------------------------------*/
+/*-------------------- ENTIRE SECTION CSS END-- --------------------*/
+/*------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------*/
+/*-------------------- CARD CSS EDIT START --------------------*/
+/*-------------------------------------------------------------*/
+
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.product-name {
+  font-size: 24px;
+  color: #0f0e0e;
+  font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-family: "Lato", Arial, sans-serif;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+} */
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 10px 14px; */
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #5a5a5a;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.row-section {
+  margin: 0px !important;
+}
+
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #5a5a5a;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #0f0e0e;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+.button:hover {
+  background: #292626;
+}
+
+/*-----------------------------------------------------------*/
+/*-------------------- CARD CSS EDIT END --------------------*/
+/*-----------------------------------------------------------*/

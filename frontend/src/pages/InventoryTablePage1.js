@@ -1,0 +1,480 @@
+import React from "react";
+
+//Styling Imports
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
+import {
+  Table,
+  Container,
+  Row,
+  Col,
+  Button,
+  Form,
+  InputGroup,
+  Navbar,
+  Nav,
+} from "react-bootstrap";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import "../css/TablePage.css";
+import Footer from "./Footer";
+import { MdDeleteForever } from "react-icons/md";
+import { RiPencilFill } from "react-icons/ri";
+import { AiOutlineMail } from "react-icons/ai";
+import { CgAssign } from "react-icons/cg";
+
+
+
+import { useAuthContext } from "../hooks/useAuthContext";
+
+//Logic Imports
+import { useEffect, useState } from "react";
+import { useItemsContext } from "../hooks/useItemsContext";
+import { sendMail } from "../helpers/Mail";
+
+function InventoryTablePage({ item }) {
+  //Backend Logic States
+
+  const { items, dispatch } = useItemsContext();
+
+  //Auth Context
+  const { user } = useAuthContext();
+
+  //Update States
+  const [name, setname] = useState("");
+  const [price, setprice] = useState("");
+  const [batchNo, setbatchNo] = useState("");
+  const [quantity, setquantity] = useState("");
+  const [category, setcategory] = useState("");
+  const [weight, setweight] = useState("");
+  const [error, seterror] = useState(null);
+  const [updateID, setupdateID] = useState("");
+  const [usermail, setusermail] = useState("lathindu2000@gmail.com");
+  const [mailmssg, setmailmssg] = useState("sending mail ");
+  const [mailStatus, setmailStatus] = useState(false);
+  const [qaassignID, setqaassignID] = useState("");
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      const response = await fetch("/api/inventory/items", {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
+
+      const json = await response.json();
+
+      if (response.ok) {
+        dispatch({ type: "SET_ITEMS", payload: json });
+      }
+    };
+
+    if (user) {
+      fetchItems();
+    }
+  }, [dispatch, user]);
+
+  // MUI Modal States
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  // Modal Form Styling
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 900,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+  };
+
+  const handleDelete = async (e, id) => {
+    if (user.role == "manager") {
+      console.log(id);
+      const response = await fetch("/api/inventory/items/" + id, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
+      const json = await response.json();
+
+      if (response.ok) {
+        dispatch({ type: "DELETE_ITEM", payload: json });
+      }
+    }
+  };
+
+  const handleUpdate = async (e, id) => {
+    if (user.role == "manager") {
+      const item = { name, batchNo, quantity, category, price, weight };
+      //console.log(item)
+      const response = await fetch("/api/inventory/items/" + updateID, {
+        method: "PATCH",
+        body: JSON.stringify(item),
+        headers: {
+          "content-type": "application/json",
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
+
+      const json = await response.json();
+
+      if (!response.ok) {
+        seterror(json.error);
+      }
+      if (response.ok) {
+        //console.log(response)
+        setname("");
+        setbatchNo("");
+        setcategory("");
+        setprice("");
+        setquantity("");
+        setweight("");
+        seterror(null);
+        setupdateID("");
+        console.log("Item Updated ID:" + id);
+        const fetchItems = async () => {
+          const response = await fetch("/api/inventory/items/" + updateID, {
+            method: "GET",
+          });
+          const json = await response.json();
+
+          if (response.ok) {
+            dispatch({ type: "UPDATE_ITEM", payload: json });
+          }
+        };
+
+        fetchItems();
+      }
+    }
+  };
+
+  const handleUpdateOpen = async (e, item) => {
+    //console.log(item._id)
+    setname(item.name);
+    setbatchNo(item.batchNo);
+    setquantity(item.quantity);
+    setcategory(item.category);
+    setquantity(item.quantity);
+    setprice(item.price);
+    setweight(item.weight);
+  };
+
+  const handleMail = () => {
+    console.log(usermail);
+    console.log("Sending Mail MSSG:");
+    sendMail({ usermail, mailmssg })
+      .then((data) => {
+        if (data.err) {
+          console.log("error", data.err);
+        } else {
+          console.log("Success");
+          setmailStatus(true);
+        }
+      })
+      .catch(console.log("error in mail server"));
+  };
+
+  const handleQA = async (e, id) => {
+    console.log(id);
+    const response = await fetch("/api/inventory/items/" + id, {
+      method: "GET",
+    });
+    const json = await response.json();
+
+    if (response.ok) {
+      dispatch({ type: "SET_ITEMS", payload: json });
+    }
+  };
+
+  return (
+    <div>
+      {/* -------------------------------------------------- */}
+      {/* ---------- ####### NAV BAR START #######---------- */}
+      {/* -------------------------------------------------- */}
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        variant="dark"
+        sticky="top"
+        className="nav-bar-edit"
+      >
+        <Container>
+          <Navbar.Brand>Inventory</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto"></Nav>
+            <Nav>
+              <Navbar.Text className="nav-component nav-user-name"></Navbar.Text>
+              <Link
+                to="/inventory/form"
+                className="btn btn-primary mr-2 nav-component nav-link-btn "
+              >
+                Form
+              </Link>
+              <Link
+                to="/dashboard"
+                className="btn btn-primary mr-2 nav-component nav-link-btn "
+              >
+                Dashboard
+              </Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {/* ------------------------------------------------ */}
+      {/* ---------- ####### NAV BAR END #######---------- */}
+      {/* ------------------------------------------------ */}
+
+      {/* ------------------------------------------------ */}
+      {/* ---------- ####### TABLE START #######---------- */}
+      {/* ------------------------------------------------ */}
+      <div className="content">
+        <h1 className="table-name">
+          <span>Inventory</span>
+        </h1>
+        <h2 className="table-info">
+          Include a brief table description in the section here.
+        </h2>
+
+        <table className="table-container">
+          <thead className="table-column">
+            <tr>
+              <th>
+                <h1>BatchNo</h1>
+              </th>
+              <th>
+                <h1>Name</h1>
+              </th>
+              <th>
+                <h1>Category</h1>
+              </th>
+              <th>
+                <h1>Quantity</h1>
+              </th>
+              <th>
+                <h1>price</h1>
+              </th>
+              <th>
+                <h1>Weight</h1>
+              </th>
+              <th>
+                <h1>Operation</h1>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {items &&
+              items.map((item) => (
+                <tr className="text-center" key={item._id}>
+                  <td>{item.batchNo}</td>
+                  <td>{item.name}</td>
+                  <td>{item.category}</td>
+                  <td>{item.quantity}</td>
+                  <td>{item.price}</td>
+                  <td>{item.weight}</td>
+
+                  <td>
+                    <Button
+                      className="delete-edit"
+                      onClick={(e) => handleDelete(e, item._id)}
+                    >
+                      <MdDeleteForever />
+                    </Button>
+
+                    <Button
+                      variant="secondary"
+                      className="update-edit"
+                      onClick={(e) => {
+                        handleOpen();
+                        handleUpdateOpen(e, item);
+                        setupdateID(item._id);
+                      }}
+                    >
+                      <RiPencilFill />
+                    </Button>
+
+                    <Link
+                      to={"/QualityAssurance/Assignment"}
+                      state={{ ItemID: item._id }}
+                    >
+                      <Button
+                        variant="secondary"
+                        className="send-mail"
+                        onClick={(e) => {
+                          setqaassignID(item._id);
+                        }}
+                      >
+                        <CgAssign />
+                      </Button>
+                    </Link>
+
+                    {/* -------------------------------------------------------- */}
+                    {/* ---------- ####### MODAL SECTION START #######---------- */}
+                    {/* -------------------------------------------------------- */}
+                    <Modal
+                      open={open}
+                      onClose={handleClose}
+                      aria-labelledby="modal-modal-title"
+                      aria-describedby="modal-modal-description"
+                    >
+                      <Box sx={style}>
+                        <Container className="table-modal-container">
+                          {/* ------------------------------------------------------ */}
+                          {/* ---------- ####### UPDATE FORM START #######---------- */}
+                          {/* ------------------------------------------------------ */}
+                          <Form className="rounded p-4 p-sm-4 border table-modal-form">
+                            <h1 className="font-weight-bold text-center pb-4 update-form-title">
+                              UPDATE FORM
+                            </h1>
+
+                            {/* ------------- Update Form START -------------*/}
+
+                            <Row>
+                              <Col>
+                                <Form.Group className="mb-4" controlId="Name">
+                                  <Form.Label>Name</Form.Label>
+                                  <InputGroup>
+                                    <Form.Control
+                                      type="text"
+                                      placeholder="Product Name"
+                                      onChange={(e) => setname(e.target.value)}
+                                      value={name}
+                                    />
+                                  </InputGroup>
+                                </Form.Group>
+                              </Col>
+                              <Col>
+                                <Form.Group
+                                  className="mb-4"
+                                  controlId="Category"
+                                >
+                                  <Form.Label>Category</Form.Label>
+                                  <InputGroup>
+                                    <Form.Control
+                                      type="text"
+                                      placeholder="Category "
+                                      onChange={(e) =>
+                                        setcategory(e.target.value)
+                                      }
+                                      value={category}
+                                    />
+                                  </InputGroup>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+
+                            <Row>
+                              <Col>
+                                <Form.Group
+                                  className="mb-4"
+                                  controlId="tQuantity"
+                                >
+                                  <Form.Label>Quantity</Form.Label>
+                                  <InputGroup>
+                                    <Form.Control
+                                      type="number"
+                                      placeholder="Quantity"
+                                      onChange={(e) =>
+                                        setquantity(e.target.value)
+                                      }
+                                      value={quantity}
+                                    />
+                                  </InputGroup>
+                                </Form.Group>
+                              </Col>
+                              <Col>
+                                <Form.Group className="mb-4" controlId="Price">
+                                  <Form.Label>Price</Form.Label>
+                                  <InputGroup>
+                                    <Form.Control
+                                      type="text"
+                                      placeholder="Price"
+                                      onChange={(e) => setprice(e.target.value)}
+                                      value={price}
+                                    />
+                                  </InputGroup>
+                                </Form.Group>
+                              </Col>
+                              <Col>
+                                <Form.Group className="mb-4" controlId="Weight">
+                                  <Form.Label>Weight</Form.Label>
+                                  <InputGroup>
+                                    <Form.Control
+                                      type="text"
+                                      placeholder="Weight"
+                                      onChange={(e) =>
+                                        setweight(e.target.value)
+                                      }
+                                      value={weight}
+                                    />
+                                  </InputGroup>
+                                </Form.Group>
+                              </Col>
+                              <Col>
+                                <Form.Group
+                                  className="mb-4"
+                                  controlId="BatchNo"
+                                >
+                                  <Form.Label>BatchNo</Form.Label>
+                                  <InputGroup>
+                                    <Form.Control
+                                      type="text"
+                                      placeholder="Batch No"
+                                      onChange={(e) =>
+                                        setbatchNo(e.target.value)
+                                      }
+                                      value={batchNo}
+                                    />
+                                  </InputGroup>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+
+                            {/* ------------- Update Form END ------------- */}
+
+                            <div className="d-grid gap-2">
+                              <Button
+                                className="insert-btn"
+                                variant="primary"
+                                type="button"
+                                onClick={(e) => {
+                                  handleClose();
+                                  handleUpdate(e, item._id);
+                                }}
+                              >
+                                Update
+                              </Button>
+                            </div>
+                          </Form>
+                          {/* ---------------------------------------------------- */}
+                          {/* ---------- ####### UPDATE FORM END #######---------- */}
+                          {/* ---------------------------------------------------- */}
+                        </Container>
+                      </Box>
+                    </Modal>
+                    {/* ------------------------------------------------------ */}
+                    {/* ---------- ####### MODAL SECTION END #######---------- */}
+                    {/* ------------------------------------------------------ */}
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
+      {/* ---------------------------------------------- */}
+      {/* ---------- ####### TABLE END #######---------- */}
+      {/* ---------------------------------------------- */}
+
+      <Footer />
+    </div>
+  );
+}
+
+export default InventoryTablePage;

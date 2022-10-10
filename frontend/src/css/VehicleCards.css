@@ -1,0 +1,18 @@
+.card-cont {
+    position: relative;
+    align-items: center;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 50px 50px ;
+}
+
+.Card_container {
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    top: 10px;
+    right: 120px;
+    position: flex;
+
+}
+

@@ -1,0 +1,239 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+/* ------------------------------------------------------------------- */
+/* ------------------------ NAV BAR CSS START ------------------------ */
+/* ------------------------------------------------------------------- */
+
+.nav-bar-edit {
+  font-family: montserrat !important;
+  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  box-shadow: -2px 7px 18px 0px rgba(255, 255, 255, 0.15);
+  background: #0f0e0e;
+  color: white;
+  padding: 15px !important;
+}
+
+.nav-user-name {
+  padding-right: 15px;
+}
+
+.nav-link-btn {
+  margin-right: 10px;
+  padding-top: 8px !important;
+  background: #455e72 !important;
+  border: #455e72 !important;
+  transition: all 0.5s ease-in-out !important;
+}
+
+.nav-link-btn:hover {
+  background: #406882 !important;
+  border: #406882 !important;
+  transition: transform 250ms linear !important;
+}
+
+.nav-logout {
+  padding-left: 15px !important;
+  padding-top: 5px;
+}
+
+.insert-form {
+  background-color: white !;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+  /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24) !important; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
+  /* max-width: 330px;
+      min-width: 330px;  */
+  margin: 15px !important;
+  font-family: montserrat !important;
+  padding-top: 0px !important;
+}
+
+/* ----------------------------------------------------------------- */
+/* ------------------------ NAV BAR CSS END ------------------------ */
+/* ----------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------- */
+/* ------------------------ TABLE CSS START ------------------------ */
+/* ----------------------------------------------------------------- */
+
+.content {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color: #0f0e0e;
+  /* background-color: #1f2739; */
+  background-color: #fdfdfd ;
+  height: 100%;
+  overflow: hidden;
+}
+
+.table-name {
+  margin-top: 70px;
+  color: #0f0e0e;
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  font-weight: 400;
+  /* color: #4dc3fa; */
+}
+
+.table-info {
+  padding-bottom: 60px !important;
+  padding-top: 10px;
+  color: #0f0e0e;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  padding-bottom: 2em;
+  font-weight: 500;
+  /* color: #fb667a; */
+}
+
+.table-container th h1 {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  color: #d5d6d1; 
+}
+
+.table-container th {
+  padding:  0px !important;
+  padding-top: 40px !important;
+  padding-bottom: 30px !important; 
+}
+
+.table-container td {
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0e1119;
+  -moz-box-shadow: 0 2px 2px -2px #0e1119;
+  box-shadow: 0 2px 2px -2px #0e1119;
+  padding: 0px !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+.table-container {
+  text-align: right;
+  overflow: hidden;
+  width: 80%;
+  margin-bottom: 60px !important;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+  border-radius: 10px;
+}
+
+.table-container td,
+.table-container th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.table-container tr:nth-child(odd) {
+  background-color: #d5d6d1;
+}
+
+/* Background-color of the even rows */
+.table-container tr:nth-child(even) {
+  background-color: #b4b5b1;
+}
+
+.table-container th {
+  background-color: #0f0e0e;
+}
+
+.table-container td:first-child {
+  color: #0f0e0e;
+}
+
+/* .table-container tr:hover {
+  background-color: #5a758a;
+  -webkit-box-shadow: 0 6px 6px -6px #0e1119;
+  -moz-box-shadow: 0 6px 6px -6px #0e1119;
+  box-shadow: 0 6px 6px -6px #0e1119;
+} */
+
+.map-btn {
+  margin-right: 10px;
+  color: white;
+  background-color: #0c469c;
+  border: #0e0635 ;
+}
+
+.map-btn:hover {
+  background-color: #0e509b;
+  border: #10045c ;
+}
+
+.delete-edit {
+  margin-right: 10px;
+  color: white;
+  background-color: #621017;
+  border: #621017 ;
+}
+
+.delete-edit:hover {
+  background-color: #a10111;
+  border: #a10111 ;
+}
+
+.update-edit {
+  color: white;
+  background-color: #124c20;
+  border: #124c20 ;
+}
+
+.update-edit:hover {
+  color: white;
+  background-color: #17be5a;
+  border: #17be5a ;
+}
+
+.send-mail{
+  margin-left: 10px;
+  background-color: #042f4e;
+}
+
+.map-container {
+  width: 80vh;
+  height: 20vh;
+}
+
+.card-cont {
+  position: relative;
+  align-items: center;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 50px 50px ;
+}
+
+.Card_container {
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  top: 10px;
+  right: 120px;
+  position: flex;
+
+}
+
+
+/* @media (max-width: 800px) {
+  .table-container td:nth-child(4),
+  .table-container th:nth-child(4) {
+    display: none;
+  }
+} */
+
+/* --------------------------------------------------------------- */
+/* ------------------------ TABLE CSS END ------------------------ */
+/* --------------------------------------------------------------- */

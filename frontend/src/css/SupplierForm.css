@@ -1,0 +1,62 @@
+.page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #424242;
+  }
+  
+  .filter-section {
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
+  
+  .filter-form {
+    background: white;
+    border-radius: 10px;
+    width: 50%;
+    /* border: 3px solid #3a3c46; */
+  }
+  
+  .filter-container {
+    font-family: montserrat !important;
+  }
+  
+  .filter-btn {
+    background: #0f0e0e !important;
+    border: #0f0e0e !important;
+    transition: all 0.5s ease-in-out !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .filter-btn:hover {
+    background: #3a414f !important;
+    border: #3a414f !important;
+    transition: transform 250ms linear !important;
+  }
+  
+  .form-field {
+    color: #0f0e0e;
+    font-weight: 500;
+  }
+  
+  .form-center {
+    display:flex;
+    justify-content: center;
+  }
+  
+  .insert-form {
+    background-color: #a7a1ae;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
+    margin: 15px !important;
+    font-family: montserrat !important;
+    padding-top: 0px !important;
+  }
+
+  .table-name{
+    text-align: center;
+  }
+
+  .table-info{
+    text-align: center;
+  }

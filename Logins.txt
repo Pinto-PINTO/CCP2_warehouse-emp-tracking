@@ -1,0 +1,28 @@
+
+Login 1
+admin@gmail.com
+aDMIN123#
+
+
+Login 2
+manager@gmail.com
+mNAGE123#
+
+
+Login 3
+person2@gmail.com
+pERSON123#
+
+Login 4
+sampath22@gmail.com
+SENta23$
+
+Login 5
+hussen@gmail.com
+hussenN33#
+
+
+1) Create User context, so that I can use user data like role, email
+2) Viewer -> Can see only his records, can update profile
+3) Manager -> Can see all User Records
+4) Admin -> Can add new employees

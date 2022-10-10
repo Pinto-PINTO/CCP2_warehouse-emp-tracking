@@ -1,0 +1,201 @@
+/* -------------------------------------- */
+/* --------- FULL FORM CSS START -------- */
+/* -------------------------------------- */
+
+.entire-form-section {
+  height: 100% !important;
+}
+
+.filter-section {
+  margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.filter-form {
+  background: white;
+  border-radius: 10px;
+  width: 50%;
+  padding-bottom: 30px !important;
+  /* border: 3px solid #3a3c46; */
+  margin-bottom: 100px;
+}
+
+.filter-container {
+  font-family: montserrat !important;
+}
+
+.filter-btn {
+  background: #0f0e0e !important;
+  border: #0f0e0e !important;
+  transition: all 0.5s ease-in-out !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.filter-btn:hover {
+  background: #3a414f !important;
+  border: #3a414f !important;
+  transition: transform 250ms linear !important;
+}
+
+.form-field {
+  color: #0f0e0e;
+  font-weight: 500;
+}
+
+.form-center {
+  display: flex;
+  justify-content: center;
+}
+
+.insert-form {
+  background-color: #a7a1ae;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
+  margin: 15px !important;
+  font-family: montserrat !important;
+  padding-top: 0px !important;
+}
+
+/* ------------------------------------ */
+/* --------- FULL FORM CSS END -------- */
+/* ------------------------------------ */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.form-top {
+    margin-top: 20px !important;
+}
+
+.form-section {
+    margin-bottom: 50px;
+}
+
+/*form styles*/
+#msform {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 90px;
+  padding-left: 400px;
+  padding-right: 400px;
+}
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 13px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #0f0e0e;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+  width: 150px;
+  background: #0f0e0e;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #0f0e0e;
+}
+
+#msform .action-button-previous {
+  width: 100px;
+  background: #c5c5f1;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #c5c5f1;
+}
+
+/*headings*/
+.fs-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Not relevant to this form */
+.dme_link {
+  margin-top: 30px;
+  text-align: center;
+}
+.dme_link a {
+  background: #fff;
+  font-weight: bold;
+  color: #0f0e0e;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 5px 25px;
+  font-size: 12px;
+}
+
+.dme_link a:hover,
+.dme_link a:focus {
+  background: #c5c5f1;
+  text-decoration: none;
+}
